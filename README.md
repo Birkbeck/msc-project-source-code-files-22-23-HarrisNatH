@@ -1,4 +1,9 @@
 # Author: Harris Nathaniel Hendra
+supervisor : Paul Yoo
+
+MSc Computer Science
+Department of Computer Science and Information Systems
+Birkbeck college, University of London 2023
 
 -----------------------------------------------------------------------------
 
