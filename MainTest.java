@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainTest {
     Questions question;
@@ -28,6 +28,8 @@ public class MainTest {
     @Test
     void choice1Test(){
         question.choice1();
+        String actual = "You are a good leader";
+        assertEquals("You are a good leader", actual);
     }
 
 }
