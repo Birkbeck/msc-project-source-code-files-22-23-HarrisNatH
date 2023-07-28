@@ -1,12 +1,12 @@
 public class Introduction {
-    
+
     public static void Introduction(){
         System.out.println(".\n..\n...\nloading...\nping\n");
         System.out.println("PERSONALITY IF GAME\nWelcome user, please input your name: ");
         
         //user name input prompt
         String name= System.console().readLine();
-        User user = new User(name);
+        Player user = new Player(name);
         System.out.println("Acknowledged, user's name is "+ user.getName() + "\n");
         
         System.out.println("A word of warning, please answer truthfully, really, TRUTHFULLY no matter what.");

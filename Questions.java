@@ -1,5 +1,7 @@
 // import java.util.Scanner;
 
+import Tally.IntroExtroTally;
+
 public class Questions {
     private int input;
 
@@ -8,7 +10,7 @@ public class Questions {
     }
 
     //constructor
-    Tally tally = new Tally(0, 0, 0, 0, 0);
+    IntroExtroTally tally = new IntroExtroTally(0, 0, 0, 0, 0);
 
     public int getInput(){
         return input;
@@ -24,6 +26,7 @@ public class Questions {
         addInput(userInput);
     }
 
+    //THE FIRST 20 FOR INTROVERT-EXTROVERT AND OPTIMSIST-PESSIMIST
     public void choice1(){
         System.out.println("Narrator: From there onwards, please choose one number that is relatable for you");
         boolean finished = false;
@@ -444,4 +447,64 @@ public class Questions {
             }
         }
     }
+
+    //
+    public void choice21(){
+        boolean finished = false;
+        while (!finished){
+            System.out.println("As a Hunter, in the face of stronger foe, do you always feel shaking? 1 for yes / 2 for no");
+            scanUser();
+            if (getInput() == 1){
+                System.out.println("   \"It's very hard but it feels so challenging\"");
+                tally.addCountExt();
+                finished=true;
+            } else if (getInput() == 2){
+                System.out.println("   \"You feel bored, its an easy challenge\"");
+                tally.addCountInt();
+                finished=true;
+            } else{
+                System.out.println("Invalid number");
+            }
+        }
+    }
+
+    public void choice22(){
+        boolean finished = false;
+        while (!finished){
+            System.out.println("The guilt after killing countless of criminals, do you rarely have nightmares? 1 for yes / 2 for no");
+            scanUser();
+            if (getInput() == 1){
+                System.out.println("   \"It's a kill or be killed, they are criminals\"");
+                tally.addCountExt();
+                finished=true;
+            } else if (getInput() == 2){
+                System.out.println("   \"Even if they are criminals, they are humans too..\"");
+                tally.addCountInt();
+                finished=true;
+            } else{
+                System.out.println("Invalid number");
+            }
+        }
+    }
+
+    public void choice23(){
+        boolean finished = false;
+        while (!finished){
+            System.out.println("You don't like others to know what you have been thinking. 1 for yes / 2 for no");
+            scanUser();
+            if (getInput() == 1){
+                System.out.println("   \"Of course its a matter of privacy\"");
+                tally.addCountExt();
+                finished=true;
+            } else if (getInput() == 2){
+                System.out.println("   \"I have nothing to hide anyway\"");
+                tally.addCountInt();
+                finished=true;
+            } else{
+                System.out.println("Invalid number");
+            }
+        }
+    }
+
+    
 }

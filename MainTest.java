@@ -2,12 +2,18 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import Tally.IntroExtroTally;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainTest {
+    String name;
+    int input;
     Questions question;
-    Tally tally = new Tally(0, 0, 0, 0, 0);
-    public int input;
+
+    
+    
 
     @BeforeEach
     public void addInput(int input){
@@ -30,6 +36,16 @@ public class MainTest {
         question.choice1();
         String actual = "You are a good leader";
         assertEquals("You are a good leader", actual);
+    }
+
+    @Test
+    void result(){
+        IntroExtroTally tally = new IntroExtroTally(7, 3, 7, 3, 0);
+        Player user = new Player(name);
+        ResultAll score = new ResultAll();
+
+        score.addToList(user, tally);
+        score.toString();
     }
 
 }
