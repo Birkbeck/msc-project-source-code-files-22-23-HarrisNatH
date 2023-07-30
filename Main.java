@@ -1,6 +1,3 @@
-import Tally.IntroExtroTally;
-import Tally.TallyOptPess;
-
 public class Main{
     static Questions question;
     
@@ -8,9 +5,10 @@ public class Main{
 
         //constructors
         Questions questions = new Questions();
-        IntroExtroTally tallyIE = new IntroExtroTally(0, 0);
+        TallyIntroExtro tallyIE = new TallyIntroExtro(0, 0);
         TallyOptPess tallyOP = new TallyOptPess(0, 0, 0);
-        Result result = new Result(tally, null);
+        Player user = new Player(null);
+        Result result = new Result(null, tallyIE, tallyOP);
         ResultAll score = new ResultAll();
 
         boolean finished=false;
@@ -20,7 +18,7 @@ public class Main{
             switch (input){
                 case 1:
                     // introduction
-                    Introduction.Introduction();
+                    Introduction.StartUp();
         
                     //opening
                     System.out.println("Narrator: It has been 10 years since you've arrived in a strange world,"+ 
@@ -55,7 +53,7 @@ public class Main{
                     System.out.println("--------------------T H E  E N D--------------------");
 
                     //RESULT
-                    System.out.println("\nDid you enjoy your adventure?\nThen I will tell the result of the choices you have made: ");
+                    System.out.println("\nHope you enjoy your adventure!\nThen I will tell the result of the choices you have made: ");
                     System.out.println("Between Extrovert and Introvert, the result is: ");
                     tallyIE.resultIE();
 

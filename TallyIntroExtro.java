@@ -1,9 +1,7 @@
-package Tally;
+
 
 public class TallyIntroExtro {
     private int countIntrovert, countExtrovert;
-    private String Introvert, Extrovert, IEMiddle;
-    PersonalityTrait trait;
 
     public TallyIntroExtro(int countIntrovert, int countExtrovert){
         this.countIntrovert = countIntrovert;
@@ -28,22 +26,22 @@ public class TallyIntroExtro {
     
     public void resultIE(){
         if(getCountExtrovert() >= 7)
-            trait.ExtrovertTrait();
+            PersonalityTrait.ExtrovertTrait();
         else if(getCountIntrovert() >= 7)
-            trait.IntrovertTrait();
+            PersonalityTrait.IntrovertTrait();
         else
-            trait.ExtrovertTrait();
+            PersonalityTrait.IEMiddleTrait();
     }
 
     //For result list 
-    public String IntroExtro(IntroExtroTally tally){
-        if(tally.getCountExtrovert() >= 7){
-            return Extrovert;
-        } else if(tally.getCountIntrovert() >= 7){
-            return Introvert;        
-        }else{
-            return IEMiddle;        
-        }
-    }
+    // public String IntroExtro(TallyIntroExtro tally){
+    //     if(tally.getCountExtrovert() >= 7){
+    //         return Extrovert;
+    //     } else if(tally.getCountIntrovert() >= 7){
+    //         return Introvert;        
+    //     }else{
+    //         return IEMiddle;        
+    //     }
+    // }
 
 }

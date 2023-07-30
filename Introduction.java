@@ -1,6 +1,7 @@
 public class Introduction {
+    Player user;
 
-    public static void Introduction(){
+    public static void StartUp(){
         System.out.println(".\n..\n...\nloading...\nping\n");
         System.out.println("PERSONALITY IF GAME\nWelcome user, please input your name: ");
         

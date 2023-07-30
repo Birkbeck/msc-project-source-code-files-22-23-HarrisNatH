@@ -1,9 +1,7 @@
-package Tally;
+
 
 public class TallyOptPess {
     private int countOptimist, countPessimist, countMiddle;
-    private String Optimist, Pessimist, OPMiddle;
-    PersonalityTrait trait;
 
     public TallyOptPess(int countOptimist, int countPessimist, int countMiddle){
         this.countOptimist = countOptimist;
@@ -37,23 +35,11 @@ public class TallyOptPess {
 
     public void resultOP(){
         if(getCountOptimist() > getCountPessimist() && getCountOptimist() > getCountMiddle())
-            trait.OptimistTrait();
+            PersonalityTrait.OptimistTrait();
         else if(getCountMiddle()>getCountOptimist() && getCountMiddle()>getCountPessimist())
-            trait.OPMiddleTrait();
+            PersonalityTrait.OPMiddleTrait();
         else
-            trait.PessimistTrait();        
-        }
-
-
-    //For result list 
-    public String OptPess(TallyIntroExtro tally){
-        if(getCountOptimist() > getCountPessimist() && getCountOptimist() > getCountMiddle()){
-            return Optimist;        
-        } else if(getCountMiddle()> getCountOptimist() && getCountMiddle()>getCountPessimist()){
-            return OPMiddle;
-        } else{
-            return Pessimist;        
-        }
+            PersonalityTrait.PessimistTrait();        
     }
 
 }

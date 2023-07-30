@@ -1,16 +1,17 @@
 // import java.util.Scanner;
 
-import Tally.IntroExtroTally;
-
 public class Questions {
     private int input;
+    TallyIntroExtro TallyIE;
+    TallyOptPess TallyOP;
 
     public void addInput(int input){
         this.input = input;
     }
 
     //constructor
-    IntroExtroTally tally = new IntroExtroTally(0, 0, 0, 0, 0);
+    TallyIntroExtro IE = new TallyIntroExtro(0, 0);
+    TallyOptPess OP = new TallyOptPess(0, 0, 0);
 
     public int getInput(){
         return input;
@@ -35,11 +36,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You are a good leader\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You are very shy, aren't you?\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else {
                 System.out.println("Invalid number");
@@ -54,11 +55,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You really care your people\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Kind of gloomy but gets the job done neatly\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             }else{
                 System.out.println("Invalid number");
@@ -73,11 +74,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You stand out from the rest!\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You know this can camouflage your identity\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             }else{
                 System.out.println("Invalid number");
@@ -92,11 +93,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You really proud of yourself\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"They can motivate you to be better\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -111,15 +112,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"She gave out a ticket to you while blushing\"\n   \"You accepted and agrees to go with her\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"it was friends behind me\"\n   \"You get hurt in feeling, but still hopefully next time!\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"She gave one to you\"\n   \"You get hurt in feeling, but grateful for a ticket\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             }else{
                 System.out.println("Invalid number");
@@ -134,11 +135,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You want to record meaningful encounters\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"All of precious memories are in your head, that's enough\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -153,11 +154,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You begin to miss them...\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You do like to look good in others eyes...\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -172,11 +173,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"For you and your crush\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"It's nice to have a break from work\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -191,15 +192,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"Hey who knows there will be an emergency\"\n   \"And there is, bandits crashing a restaurant\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Finally no heavy equipment\"\n   \"However bandits show up, you subjugated using cutlery\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"Well, never hurt to be careful\"\n   \"The instant bandits show up, you immediately subjugated them\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -214,15 +215,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"She waves at you, and you waves back\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You waves at your crush, noticed back\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"You're sad but understand the situation\"\n   \"You then eat alone\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -237,15 +238,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You worry, so you track her whereabouts\"\n   \"Turns out your crush was on secret mission\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You know your crush better, and you are right\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"Calm down, your jealousy is showing up\"\n   \"There, look your crush come back\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -260,11 +261,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You never miss for any rumors\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You release all the pent up stress\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -279,11 +280,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"Never hurt to have friends\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You dislike being in crowd, understandable.. \"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -298,15 +299,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You feel chills from your crush's gaze\"\n   \"She frowns and you two don't talk a word for a day\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Wow, never knew this job is so fun.\"\n   \"Why have you been so against it?\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"She is happy and that makes you happy, that's enough\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -321,15 +322,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"She praised you for all you have done to her\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"It's a gift, your crush thanks you\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"You're overthinking, it's a gift..\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -344,15 +345,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You thank your friend and promise a meal\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Thankfully there is someone agrees to help you\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"your crush understood your predicament, and decides to help you\"\n   \"well this counts as a date plan\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -367,15 +368,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You assure it's not serious and is being thanked for your attention\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Your cursh is at least grateful for your visit\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"Your crush is kind of sad..\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -390,15 +391,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You are very optimist\"\n   \"It was a promotion you have desired\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"He laughs at your nervousness\"\n   \"He gave out the S-rank badge, it is a promotion!\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"He looks at your expression, assures you it is a promotion\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -413,15 +414,15 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You are strong, you havent contributed enough\"");
-                tally.addCountOpt();
+                OP.addCountOpt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Your abilities are still average\"");
-                tally.addCountMid();
+                OP.addCountMid();
                 finished=true;
             } else if (getInput() == 3){
                 System.out.println("   \"They are right, it's not time for you\"");
-                tally.addCountPess();
+                OP.addCountPess();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -436,11 +437,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"You tears up, that dream felt so real\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Back on your seat, you smiles and quotes: What an adventure\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -456,11 +457,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"It's very hard but it feels so challenging\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"You feel bored, its an easy challenge\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -475,11 +476,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"It's a kill or be killed, they are criminals\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"Even if they are criminals, they are humans too..\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");
@@ -494,11 +495,11 @@ public class Questions {
             scanUser();
             if (getInput() == 1){
                 System.out.println("   \"Of course its a matter of privacy\"");
-                tally.addCountExt();
+                IE.addCountExt();
                 finished=true;
             } else if (getInput() == 2){
                 System.out.println("   \"I have nothing to hide anyway\"");
-                tally.addCountInt();
+                IE.addCountInt();
                 finished=true;
             } else{
                 System.out.println("Invalid number");

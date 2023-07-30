@@ -1,12 +1,9 @@
-import Tally.IntroExtroTally;
-import Tally.TallyOptPess;
-
 public class Result {
-    private IntroExtroTally tallyIE;
+    private TallyIntroExtro tallyIE;
     private TallyOptPess tallyOP;
     private Player user;
 
-    public Result(Player user, IntroExtroTally tallyIE, TallyOptPess tallyOP){
+    public Result(Player user, TallyIntroExtro tallyIE, TallyOptPess tallyOP){
         this.user = user;
         this.tallyIE = tallyIE;
         this.tallyOP = tallyOP; 
@@ -14,6 +11,6 @@ public class Result {
 
     @Override
     public String toString(){
-        return user.getName() + " : " + tally.IntroExtro(new IntroExtroTally(0, 0)) + ", " + tally.OptPess(new TallyOptPess(0, 0, 0));
+        return user.getName() + ", Traits: " + user.setPersonalityIE(tallyIE) + ", " + user.setPersonalityOP(tallyOP);
     }
 }

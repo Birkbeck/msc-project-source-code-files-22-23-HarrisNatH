@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import Tally.IntroExtroTally;
-
 public class ResultAll {
     ArrayList<Result> results;
 
@@ -9,8 +7,8 @@ public class ResultAll {
         this.results = new ArrayList<>();
     }
 
-    public void addToList(Player user, IntroExtroTally tally){
-        Result newResult = new Result(tally, user);
+    public void addToList(Player user, TallyIntroExtro tallyIE, TallyOptPess tallyOP){
+        Result newResult = new Result(user, tallyIE, tallyOP);
         results.add(newResult);
     }
     
