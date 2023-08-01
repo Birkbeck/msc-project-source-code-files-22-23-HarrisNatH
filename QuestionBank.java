@@ -1,5 +1,8 @@
 public class QuestionBank {
-    Questions questions;
+    // Questions que;
+
+    //constructor
+    Questions questions = new Questions();
 
     public void Process(){
         //EI  Q1

@@ -1,5 +1,3 @@
-
-
 public class PersonalityTrait {
 
     public static void ExtrovertTrait(){

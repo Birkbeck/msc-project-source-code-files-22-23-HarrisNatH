@@ -7,8 +7,8 @@ public class ResultAll {
         this.results = new ArrayList<>();
     }
 
-    public void addToList(Player user, TallyIntroExtro tallyIE, TallyOptPess tallyOP){
-        Result newResult = new Result(user, tallyIE, tallyOP);
+    public void addToList(String name, String traitIE, String traitOP){
+        Result newResult = new Result(name, traitIE, traitOP);
         results.add(newResult);
     }
     
@@ -16,7 +16,7 @@ public class ResultAll {
     public String toString(){
        String print = ""; 
         for(Result item : results) { 
-            print += item.toString() + "\n";
+            print += item.displayInfo() + "\n";
         }
         return print;
     }

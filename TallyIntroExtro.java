@@ -33,6 +33,8 @@ public class TallyIntroExtro {
             PersonalityTrait.IEMiddleTrait();
     }
 
+    
+
     //For result list 
     // public String IntroExtro(TallyIntroExtro tally){
     //     if(tally.getCountExtrovert() >= 7){
