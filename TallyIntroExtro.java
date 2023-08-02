@@ -16,6 +16,11 @@ public class TallyIntroExtro {
         return countExtrovert;
     }
 
+    public static void resetCountIE(){
+        TallyIntroExtro.countIntrovert = 0;
+        TallyIntroExtro.countExtrovert = 0;
+    }
+
     public void addCountInt(){
         countIntrovert++;
     }
@@ -32,18 +37,4 @@ public class TallyIntroExtro {
         else
             PersonalityTrait.IEMiddleTrait();
     }
-
-    
-
-    //For result list 
-    // public String IntroExtro(TallyIntroExtro tally){
-    //     if(tally.getCountExtrovert() >= 7){
-    //         return Extrovert;
-    //     } else if(tally.getCountIntrovert() >= 7){
-    //         return Introvert;        
-    //     }else{
-    //         return IEMiddle;        
-    //     }
-    // }
-
 }

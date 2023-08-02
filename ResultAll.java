@@ -14,10 +14,15 @@ public class ResultAll {
     
     @Override
     public String toString(){
-       String print = ""; 
+        if(results == null){
+            return "Sorry! no score saved yet";
+        }
+
+        String print = ""; 
         for(Result item : results) { 
             print += item.displayInfo() + "\n";
         }
         return print;
+        
     }
 }

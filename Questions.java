@@ -44,7 +44,6 @@ public class Questions {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid, please input a number\n");
             }
-            
         }
     }
 

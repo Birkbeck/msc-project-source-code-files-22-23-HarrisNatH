@@ -21,6 +21,12 @@ public class TallyOptPess {
         return countMiddle;
     }
 
+    public static void resetCountOP(){
+        TallyOptPess.countOptimist = 0;
+        TallyOptPess.countPessimist = 0;
+        TallyOptPess.countMiddle = 0;
+    }
+
     public void addCountOpt(){
         countOptimist ++;
     }
@@ -41,5 +47,4 @@ public class TallyOptPess {
         else
             PersonalityTrait.PessimistTrait();        
     }
-
 }
