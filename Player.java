@@ -10,20 +10,20 @@ public class Player {
         return this.name;
     }
 
-    public String setPersonalityIE(TallyIntroExtro IE){
-        if(IE.getCountExtrovert() >= 7){
+    public String setPersonalityIE(){
+        if(TallyIntroExtro.getCountExtrovert() >= 7){
             return Extrovert;
-        } else if(IE.getCountIntrovert() >= 7){
+        } else if(TallyIntroExtro.getCountIntrovert() >= 7){
             return Introvert;        
         }else{
             return IEMiddle;        
         }
     }
 
-    public String setPersonalityOP(TallyOptPess OP){
-        if(OP.getCountOptimist() > OP.getCountPessimist() && OP.getCountOptimist() > OP.getCountMiddle())
+    public String setPersonalityOP(){
+        if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
             return Optimist;
-        else if(OP.getCountMiddle()>OP.getCountOptimist() && OP.getCountMiddle()>OP.getCountPessimist())
+        else if(TallyOptPess.getCountMiddle()>TallyOptPess.getCountOptimist() && TallyOptPess.getCountMiddle()>TallyOptPess.getCountPessimist())
             return OPMiddle;
         else
             return Pessimist; 

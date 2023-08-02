@@ -18,6 +18,8 @@ public class Questions {
     //     int userInput = Integer.parseInt(System.console().readLine());
     //     addInput(userInput);
     // }
+    // TallyIntroExtro IE;
+    // TallyOptPess OP;
 
     //constructor
     TallyIntroExtro IE = new TallyIntroExtro(0, 0);

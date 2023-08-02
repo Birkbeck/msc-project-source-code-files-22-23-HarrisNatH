@@ -1,13 +1,13 @@
 public class Main{
-    
+
     public static void main(String[]args){
 
         //constructors
         QuestionBank Qbank = new QuestionBank();
         ResultAll score = new ResultAll();
 
-        TallyIntroExtro tallyIE = new TallyIntroExtro(0, 0);
-        TallyOptPess tallyOP = new TallyOptPess(0, 0, 0);
+        // TallyIntroExtro tallyIE = new TallyIntroExtro(0, 0);
+        // TallyOptPess tallyOP = new TallyOptPess(0, 0, 0);
 
         boolean finished=false;
         while(!finished){
@@ -71,13 +71,13 @@ public class Main{
                     //RESULT
                     System.out.println("\nHope you enjoy your adventure!\nThen I will tell the result of the choices you have made: ");
                     System.out.println("\nBetween Extrovert and Introvert, the result is: ");
-                    tallyIE.resultIE();
+                    TallyIntroExtro.resultIE();
 
                     System.out.println("Between Optimist and Pessimist, the result is: ");
-                    tallyOP.resultOP();
+                    TallyOptPess.resultOP();
 
-                    String userTraitIE = user.setPersonalityIE(tallyIE);
-                    String userTraitOP = user.setPersonalityOP(tallyOP);
+                    String userTraitIE = user.setPersonalityIE();
+                    String userTraitOP = user.setPersonalityOP();
                     score.addToList(name, userTraitIE, userTraitOP);
 
 

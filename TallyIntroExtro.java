@@ -1,18 +1,18 @@
 
 
 public class TallyIntroExtro {
-    private int countIntrovert, countExtrovert;
+    private static int countIntrovert, countExtrovert;
 
     public TallyIntroExtro(int countIntrovert, int countExtrovert){
-        this.countIntrovert = countIntrovert;
-        this.countExtrovert = countExtrovert;
+        TallyIntroExtro.countIntrovert = countIntrovert;
+        TallyIntroExtro.countExtrovert = countExtrovert;
     }
 
-    public int getCountIntrovert(){
+    public static int getCountIntrovert(){
         return countIntrovert;
     }
 
-    public int getCountExtrovert(){
+    public static int getCountExtrovert(){
         return countExtrovert;
     }
 
@@ -24,7 +24,7 @@ public class TallyIntroExtro {
         countExtrovert ++;
     }
     
-    public void resultIE(){
+    public static void resultIE(){
         if(getCountExtrovert() >= 7)
             PersonalityTrait.ExtrovertTrait();
         else if(getCountIntrovert() >= 7)

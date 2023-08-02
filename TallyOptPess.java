@@ -1,23 +1,23 @@
 
 
 public class TallyOptPess {
-    private int countOptimist, countPessimist, countMiddle;
+    private static int countOptimist, countPessimist, countMiddle;
 
     public TallyOptPess(int countOptimist, int countPessimist, int countMiddle){
-        this.countOptimist = countOptimist;
-        this.countPessimist = countPessimist;
-        this.countMiddle = countMiddle;
+        TallyOptPess.countOptimist = countOptimist;
+        TallyOptPess.countPessimist = countPessimist;
+        TallyOptPess.countMiddle = countMiddle;
     }
 
-    public int getCountOptimist(){
+    public static int getCountOptimist(){
         return countOptimist;
     }
 
-    public int getCountPessimist(){
+    public static int getCountPessimist(){
         return countPessimist;
     }
 
-    public int getCountMiddle(){
+    public static int getCountMiddle(){
         return countMiddle;
     }
 
@@ -33,7 +33,7 @@ public class TallyOptPess {
         countMiddle ++;
     }
 
-    public void resultOP(){
+    public static void resultOP(){
         if(getCountOptimist() > getCountPessimist() && getCountOptimist() > getCountMiddle())
             PersonalityTrait.OptimistTrait();
         else if(getCountMiddle()>getCountOptimist() && getCountMiddle()>getCountPessimist())
