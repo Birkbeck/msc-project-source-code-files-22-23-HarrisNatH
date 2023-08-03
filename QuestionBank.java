@@ -6,7 +6,7 @@ public class QuestionBank {
 
     public void Process(){
         //EI  Q1
-        String narative = "You wake up, and see your reflection in mirror, do you see yourself as:\n1. A leader for your party\n2. A lone adventurer";
+        String narative = "\nYou wake up, and see your reflection in mirror, do you see yourself as:\n1. A leader for your party\n2. A lone adventurer";
         String choiceA = "   \"You are a good leader\"";
         String choiceB = "   \"You are very shy, aren't you?\"";
         questions.QuestionEI(narative, choiceA, choiceB);

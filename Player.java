@@ -1,6 +1,6 @@
 public class Player {
     private String name;
-    private String Introvert, Extrovert, IEMiddle, Optimist, Pessimist, OPMiddle;
+    private static String Introvert, Extrovert, IEMiddle, Optimist, Pessimist, OPMiddle;
 
     public Player(String name){
         this.name = name;
@@ -10,7 +10,7 @@ public class Player {
         return this.name;
     }
 
-    public String setPersonalityIE(){
+    public static String setPersonalityIE(){
         if(TallyIntroExtro.getCountExtrovert() >= 7){
             return Extrovert;
         } else if(TallyIntroExtro.getCountIntrovert() >= 7){
@@ -20,7 +20,7 @@ public class Player {
         }
     }
 
-    public String setPersonalityOP(){
+    public static String setPersonalityOP(){
         if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
             return Optimist;
         else if(TallyOptPess.getCountMiddle()>TallyOptPess.getCountOptimist() && TallyOptPess.getCountMiddle()>TallyOptPess.getCountPessimist())
