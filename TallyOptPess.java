@@ -47,4 +47,13 @@ public class TallyOptPess {
         else
             PersonalityTrait.PessimistTrait();        
     }
+
+    // public static String setPersonalityOP(){
+    //     if(getCountOptimist() > getCountPessimist() && getCountOptimist() > getCountMiddle())
+    //         return "Optimist";
+    //     else if(getCountMiddle()>getCountOptimist() && getCountMiddle()>getCountPessimist())
+    //         return "Optimist-Pessimist middle";
+    //     else
+    //         return "Pessimist"; 
+    // }
 }

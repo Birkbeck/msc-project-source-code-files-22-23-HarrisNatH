@@ -1,31 +1,35 @@
 public class Player {
     private String name;
-    private static String Introvert, Extrovert, IEMiddle, Optimist, Pessimist, OPMiddle;
 
     public Player(String name){
         this.name = name;
     }
     
     public String getName(){
-        return this.name;
+        return name;
     }
 
     public static String setPersonalityIE(){
         if(TallyIntroExtro.getCountExtrovert() >= 7){
-            return Extrovert;
+            return "Extrovert";
         } else if(TallyIntroExtro.getCountIntrovert() >= 7){
-            return Introvert;        
+            return "Introvert";        
         }else{
-            return IEMiddle;        
+            return "Intro-Extro middle";        
         }
     }
 
     public static String setPersonalityOP(){
         if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
-            return Optimist;
+            return "Optimist";
         else if(TallyOptPess.getCountMiddle()>TallyOptPess.getCountOptimist() && TallyOptPess.getCountMiddle()>TallyOptPess.getCountPessimist())
-            return OPMiddle;
+            return "Optimist-Pessimist middle";
         else
-            return Pessimist; 
+            return "Pessimist"; 
+    }
+
+    //this point experiment 
+    public String displayInfo(){
+        return getName() + ", Traits: " + setPersonalityIE() + ", " + setPersonalityOP();
     }
 }

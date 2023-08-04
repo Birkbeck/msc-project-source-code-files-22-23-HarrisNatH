@@ -20,24 +20,13 @@ public class GameManager {
                     System.out.println("\nWelcome user, please input your name: ");
                     
                     //user name input prompt
-                    
                     players.addPlayer();
-                        
                     
-                    // String name= System.console().readLine();
-                    // Player user = new Player(name);
-                    // System.out.println("Acknowledged, user's name is "+ user.getName() + "\n");
-                    
-                    // System.out.println("Without further ado, let me welcome you, to a new adventure. Good luck " + user.getName());
-                    // System.out.println();
-                    // System.out.println("Narrator: Welcome "+ user.getName());
-        
                     //opening
-                    System.out.println("Narrator: It has been 10 years since you've arrived in a strange world,"+ 
+                    System.out.println("\nNarrator: It has been 10 years since you've arrived in a strange world,"+ 
                         "similar to Earth in medieval era but it has magic and monsters.\n"+
                         "You have climbed in ranks as an A class adventurer and you currently has a crush on another adventurer\n");
                     System.out.println("Narrator: From there onwards, please choose one number that is relatable for you");
-                    
                     // Qbank.Process();
                     
                     //after Q20
@@ -55,8 +44,11 @@ public class GameManager {
                     System.out.println(TallyIntroExtro.getCountExtrovert()+", "+ TallyIntroExtro.getCountIntrovert());
                     System.out.println(TallyOptPess.getCountOptimist()+", "+ TallyOptPess.getCountMiddle()+", "+ TallyOptPess.getCountPessimist());
                     
+                    System.out.println(Player.setPersonalityIE() +", "+Player.setPersonalityOP());
+
                     //Assign player's result to resultAll list
-                    // score.addToList(name, Player.setPersonalityIE(), Player.setPersonalityOP());
+                    players.addToList("..");
+                    //how to call player name?
 
                     //reset count for constructors
                     TallyIntroExtro.resetCountIE();
@@ -64,7 +56,7 @@ public class GameManager {
                     break;
 
                 case 2:
-                    System.out.println(score);  
+                    System.out.println(players);  
                     break;
                 
                 case 3:

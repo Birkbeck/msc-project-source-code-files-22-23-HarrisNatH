@@ -1,7 +1,4 @@
 public class Result {
-    // private TallyIntroExtro tallyIE;
-    // private TallyOptPess tallyOP;
-    // // private Player user;
     private String name;
     private String traitIE;
     private String traitOP;
