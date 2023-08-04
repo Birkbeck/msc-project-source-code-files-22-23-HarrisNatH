@@ -33,7 +33,7 @@ I took two tests that governs the general traits, namely Introvert vs Extrovert 
 ## Gameplay
 The user would need to have understand the forewarning at the beginning of the program, that they are to answer truthfully for accurate assessment
 
-then will be prompted to give their name, and begins the game.
+then will be prompted to give their name, in which if duplicate name detected, it will ask again for new name, otherwise begins the game.
 
 For each point of story, they will be given choices to choose, there is no true or false merely plot story affection. Each choice simply give small change akin to butterfly effect to the entire adventure.
 

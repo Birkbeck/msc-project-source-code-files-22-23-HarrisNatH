@@ -33,23 +33,15 @@ public class PlayerList {
         }
     }
 
-    //this point experiment 
-    public void addToList(String name){
-        Player newPlayer = new Player(name);
-        players.add(newPlayer);
-    }
-
     @Override
     public String toString(){
         if(players == null){
-            return "Sorry! no score saved yet";
+            System.out.println("Sorry! no score saved yet");
         }
 
         String print = ""; 
         for(Player item : players) { 
-            int number = 1;
-            print += number + item.displayInfo() + "\n";
-            number++;
+            print += item.displayInfo() + "\n";
         }
         return print;
         

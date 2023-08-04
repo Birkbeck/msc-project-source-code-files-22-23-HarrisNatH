@@ -1,26 +1,5 @@
-// import java.util.Scanner;
-
 public class Questions {
-    // TallyIntroExtro IE;
-    // TallyOptPess OP;
-
-    // private int input;
-    // public void addInput(int input){
-    //     this.input = input;
-    // }
-
-    // public int getInput(){
-    //     return input;
-    // }
     
-    // //scanner method
-    // public void scanUser(){
-    //     int userInput = Integer.parseInt(System.console().readLine());
-    //     addInput(userInput);
-    // }
-    // TallyIntroExtro IE;
-    // TallyOptPess OP;
-
     //constructor
     TallyIntroExtro IE = new TallyIntroExtro(0, 0);
     TallyOptPess OP = new TallyOptPess(0, 0, 0);

@@ -28,8 +28,7 @@ public class Player {
             return "Pessimist"; 
     }
 
-    //this point experiment 
     public String displayInfo(){
-        return getName() + ", Traits: " + setPersonalityIE() + ", " + setPersonalityOP();
+        return getName() + "\nTraits: " + setPersonalityIE() + ", " + setPersonalityOP() + "\n";
     }
 }

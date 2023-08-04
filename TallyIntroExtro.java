@@ -1,5 +1,3 @@
-
-
 public class TallyIntroExtro {
     private static int countIntrovert, countExtrovert;
 
@@ -37,16 +35,4 @@ public class TallyIntroExtro {
         else
             PersonalityTrait.IEMiddleTrait();
     }
-
-    // public static String setPersonalityIE(){
-    //     if(getCountExtrovert() >= 7){
-    //         return "Extrovert";
-    //     } else if(getCountIntrovert() >= 7){
-    //         return "Introvert";        
-    //     }else{
-    //         return "Intro-Extro middle";        
-    //     }
-    // }
-
-    
 }
