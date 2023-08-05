@@ -16,12 +16,22 @@ public class PlayerList {
         return false;
     }
 
+    public boolean containsOnlyLetters (String name) {
+        for (char c : name.toCharArray()) {
+            if (!Character.isLetter(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void addPlayer() {
         System.out.println("\nHold on, Player please tell us your name!");
         boolean nameValid = false;
         while (!nameValid) {
             String user = System.console().readLine();
-            if (!isPlayerNameTaken(user)) {
+            
+            if (containsOnlyLetters(user) && !isPlayerNameTaken(user)) {
                 Player newPlayer = new Player(user);
                 players.add(newPlayer);
                 System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!");
