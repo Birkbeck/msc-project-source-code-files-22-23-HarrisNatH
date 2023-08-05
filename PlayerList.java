@@ -16,19 +16,36 @@ public class PlayerList {
         return false;
     }
 
-    public void addPlayer(){
+    // public void addPlayer(){
+    //     boolean nameValid = false;
+    //     while(!nameValid){
+    //         String user= System.console().readLine();
+    //         if (!isPlayerNameTaken(user)) {
+    //             Player newPlayer = new Player(user);
+    //             players.add(newPlayer);
+    //             System.out.println("\nPlayer " + user + " created.");
+    //             System.out.println("Let me welcome you, to a new adventure. Good luck " + user);
+    //             nameValid = true;
+    //         } else {                                                       
+    //             System.out.println("\nSorry, " + user + " is already taken.");
+    //             System.out.println("Please input another name:");      
+    //         }
+    //     }
+    // }
+
+    public void addPlayer() {
+        System.out.println("\nHold on, Player please tell us your name!");
         boolean nameValid = false;
-        while(!nameValid){
-            String user= System.console().readLine();
+        while (!nameValid) {
+            String user = System.console().readLine();
             if (!isPlayerNameTaken(user)) {
                 Player newPlayer = new Player(user);
                 players.add(newPlayer);
-                System.out.println("\nPlayer " + user + " created.");
-                System.out.println("Let me welcome you, to a new adventure. Good luck " + user);
+                System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!\n\n");
                 nameValid = true;
-            } else {                                                       
+            } else {
                 System.out.println("\nSorry, " + user + " is already taken.");
-                System.out.println("Please input another name:");      
+                System.out.println("Please give another name:");
             }
         }
     }
@@ -39,6 +56,7 @@ public class PlayerList {
             System.out.println("Sorry! no score saved yet");
         }
 
+        // System.out.println("The Players' Record:");
         String print = ""; 
         for(Player item : players) { 
             print += item.displayInfo() + "\n";

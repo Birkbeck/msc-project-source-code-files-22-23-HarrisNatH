@@ -1,25 +1,36 @@
 public class Player {
     private String name;
+    private String traitIE;
+    private String traitOP;
 
     public Player(String name){
         this.name = name;
+        this.traitIE = setPersonalityIE();
+        this.traitOP = setPersonalityOP();
     }
     
     public String getName(){
         return name;
     }
 
-    public static String setPersonalityIE(){
-        if(TallyIntroExtro.getCountExtrovert() >= 7){
-            return "Extrovert";
-        } else if(TallyIntroExtro.getCountIntrovert() >= 7){
-            return "Introvert";        
-        }else{
-            return "Intro-Extro middle";        
-        }
+    public String getTraitIE(){
+        return traitIE;
     }
 
-    public static String setPersonalityOP(){
+    public String getTraitOP(){
+        return traitOP;
+    }
+
+    private String setPersonalityIE(){
+        if(TallyIntroExtro.getCountExtrovert() >= 7)
+            return "Extrovert";
+        else if(TallyIntroExtro.getCountIntrovert() >= 7)
+            return "Introvert";        
+        else
+            return "Intro-Extro middle";        
+    }
+
+    private String setPersonalityOP(){
         if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
             return "Optimist";
         else if(TallyOptPess.getCountMiddle()>TallyOptPess.getCountOptimist() && TallyOptPess.getCountMiddle()>TallyOptPess.getCountPessimist())
@@ -29,6 +40,6 @@ public class Player {
     }
 
     public String displayInfo(){
-        return getName() + "\nTraits: " + setPersonalityIE() + ", " + setPersonalityOP() + "\n";
+        return  "\n" + getName() + "\nTraits: " + getTraitIE() + ", " + getTraitOP();
     }
 }
