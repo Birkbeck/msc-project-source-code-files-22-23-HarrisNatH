@@ -16,23 +16,6 @@ public class PlayerList {
         return false;
     }
 
-    // public void addPlayer(){
-    //     boolean nameValid = false;
-    //     while(!nameValid){
-    //         String user= System.console().readLine();
-    //         if (!isPlayerNameTaken(user)) {
-    //             Player newPlayer = new Player(user);
-    //             players.add(newPlayer);
-    //             System.out.println("\nPlayer " + user + " created.");
-    //             System.out.println("Let me welcome you, to a new adventure. Good luck " + user);
-    //             nameValid = true;
-    //         } else {                                                       
-    //             System.out.println("\nSorry, " + user + " is already taken.");
-    //             System.out.println("Please input another name:");      
-    //         }
-    //     }
-    // }
-
     public void addPlayer() {
         System.out.println("\nHold on, Player please tell us your name!");
         boolean nameValid = false;
@@ -41,7 +24,7 @@ public class PlayerList {
             if (!isPlayerNameTaken(user)) {
                 Player newPlayer = new Player(user);
                 players.add(newPlayer);
-                System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!\n\n");
+                System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!");
                 nameValid = true;
             } else {
                 System.out.println("\nSorry, " + user + " is already taken.");
@@ -52,17 +35,17 @@ public class PlayerList {
 
     @Override
     public String toString(){
-        if(players == null){
-            System.out.println("Sorry! no score saved yet");
+        if(players.isEmpty()){
+            return "Sorry! the Players' record empty!";
         }
-
-        // System.out.println("The Players' Record:");
-        String print = ""; 
-        for(Player item : players) { 
-            print += item.displayInfo() + "\n";
+        else{
+            System.out.println("The Players' Record:");
+            String print = ""; 
+            for(Player item : players) { 
+                print += item.displayInfo() + "\n";
+            }
+            return print;
         }
-        return print;
-        
     }
 }
 

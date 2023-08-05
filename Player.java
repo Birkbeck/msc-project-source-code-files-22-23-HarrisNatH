@@ -40,6 +40,6 @@ public class Player {
     }
 
     public String displayInfo(){
-        return  "\n" + getName() + "\nTraits: " + getTraitIE() + ", " + getTraitOP();
+        return  "\n   " + getName() + "\n   Traits: " + getTraitIE() + ", " + getTraitOP();
     }
 }
