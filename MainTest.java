@@ -12,10 +12,10 @@ public class MainTest {
 
     @Test
     void displayInfo(){
-        ResultAll score = new ResultAll();
-        score.addToList("Har", "Introvert", "OPMiddle");
-        score.addToList("Any", "Extrovert", "Pessimist");
-        String expected = "Har, Traits: Introvert, OPMiddle\nAny, Traits: Extrovert, Pessimist";
+        PlayerList score = new PlayerList();
+        score.addPlayer("Har");
+        score.addPlayer("Any");
+        String expected = "\n   Har\n   Traits: Introvert, OPMiddle\n   Any\n   Traits: Extrovert, Pessimist";
         assertEquals(expected, score.toString());
     }
 

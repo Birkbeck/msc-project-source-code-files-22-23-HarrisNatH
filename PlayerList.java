@@ -29,18 +29,37 @@ public class PlayerList {
         System.out.println("\nHold on, Player please tell us your name!");
         boolean nameValid = false;
         while (!nameValid) {
-            String user = System.console().readLine();
+            String user = System.console().readLine().trim();
 
-            if (containsOnlyLetters(user) && !isPlayerNameTaken(user)) {
+            if (user.isEmpty()) {
+                System.out.println("\nSorry, name cannot be empty. Please give another name:");
+            } else if (containsOnlyLetters(user) && !isPlayerNameTaken(user)) {
                 Player newPlayer = new Player(user);
                 players.add(newPlayer);
                 System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!");
                 nameValid = true;
             } else {
-                System.out.println("\nSorry, " + user + " is already taken or is invalid.");
-                System.out.println("Please give another name:");
+                System.out.println("\nSorry, " + user + " is already taken or is invalid. Please give another name:");
             }
         }
+        // do {
+        //     String user = System.console().readLine().trim(); // Trim leading/trailing white spaces
+            
+        //     if (user.isEmpty()) {
+        //         System.out.println("\nSorry, name cannot be empty. Please give another name:");
+        //     } else if (containsOnlyLetters(user) && !isPlayerNameTaken(user)) {
+        //         Player newPlayer = new Player(user);
+        //         players.add(newPlayer);
+        //         System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!");
+        //         nameValid = true;
+        //     } else {
+        //         if (!containsOnlyLetters(user)) {
+        //             System.out.println("\nSorry, the name should contain only letters. Please give another name:");
+        //         } else {
+        //             System.out.println("\nSorry, " + user + " is already taken. Please give another name:");
+        //         }
+        //     }
+        // } while (!nameValid);
     }
 
     @Override

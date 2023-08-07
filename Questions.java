@@ -11,11 +11,11 @@ public class Questions {
                 System.out.println(narative);
                 int userInput = Integer.parseInt(System.console().readLine());
                 if (userInput == 1){
-                    System.out.println(ExtrovertChoice);
+                    FrameBorder.printResponse(ExtrovertChoice);
                     IE.addCountExt();
                     finished=true;
                 } else if (userInput == 2){
-                    System.out.println(IntrovertChoice);
+                    FrameBorder.printResponse(IntrovertChoice);
                     IE.addCountInt();
                     finished=true;
                 } else 
@@ -33,11 +33,11 @@ public class Questions {
                 System.out.println(narative);
                 int userInput = Integer.parseInt(System.console().readLine());
                 if (userInput == 1){
-                    System.out.println(IntrovertChoice);
+                    FrameBorder.printResponse(IntrovertChoice);
                     IE.addCountInt();
                     finished=true;
                 } else if (userInput == 2){
-                    System.out.println(ExtrovertChoice);
+                    FrameBorder.printResponse(ExtrovertChoice);
                     IE.addCountExt();
                     finished=true;
                 } else 
@@ -55,15 +55,15 @@ public class Questions {
                 System.out.println(narative);
                 int userInput = Integer.parseInt(System.console().readLine());
                 if (userInput == 1){
-                    System.out.println(choice1);
+                    FrameBorder.printResponse(choice1);
                     OP.addCountOpt();
                     finished=true;
                 } else if (userInput == 2){
-                    System.out.println(choice2);
+                    FrameBorder.printResponse(choice2);
                     OP.addCountMid();
                     finished=true;
                 } else if (userInput == 3){
-                    System.out.println(choice3);
+                    FrameBorder.printResponse(choice3);
                     OP.addCountPess();
                     finished=true;
                 }else

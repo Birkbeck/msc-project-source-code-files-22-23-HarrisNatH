@@ -10,7 +10,7 @@ public class GameManager {
         while(!finished){
             try{
                 //Title Intro    
-                TitleIntro.printTitleIntro();
+                FrameBorder.printTitleIntro();
                 System.out.println("\nWelcome Player to IF (Interactive Fiction) game.\nA word of warning, please answer truthfully, really TRUTHFULLY no matter what.\nIt's all for your assessment accuracy :)\n");
                 MessageDelayer.waiting();
 
