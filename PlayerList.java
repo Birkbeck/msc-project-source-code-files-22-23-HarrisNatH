@@ -30,14 +30,14 @@ public class PlayerList {
         boolean nameValid = false;
         while (!nameValid) {
             String user = System.console().readLine();
-            
+
             if (containsOnlyLetters(user) && !isPlayerNameTaken(user)) {
                 Player newPlayer = new Player(user);
                 players.add(newPlayer);
                 System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!");
                 nameValid = true;
             } else {
-                System.out.println("\nSorry, " + user + " is already taken.");
+                System.out.println("\nSorry, " + user + " is already taken or is invalid.");
                 System.out.println("Please give another name:");
             }
         }
@@ -46,7 +46,7 @@ public class PlayerList {
     @Override
     public String toString(){
         if(players.isEmpty()){
-            return "Sorry! the Players' record empty!";
+            return "Sorry! the Players' record is empty!";
         }
         else{
             System.out.println("The Players' Record:");

@@ -1,6 +1,6 @@
 public class MessageDelayer {
     private static final int delayed= 1000;
-
+    
     public static void waiting() {
         try {
             Thread.sleep(delayed);

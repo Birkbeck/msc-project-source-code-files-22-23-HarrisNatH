@@ -2,7 +2,7 @@ public class Player {
     private String name;
     private String traitIE;
     private String traitOP;
-
+    
     public Player(String name){
         this.name = name;
         this.traitIE = setPersonalityIE();

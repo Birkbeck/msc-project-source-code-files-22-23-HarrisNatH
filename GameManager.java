@@ -3,15 +3,15 @@ public class GameManager {
     //constructors
     QuestionBank Qbank = new QuestionBank();
     PlayerList players = new PlayerList();
-
+    
     public void GameStart(){
 
         boolean finished = false;
         while(!finished){
             try{
                 //Title Intro    
-                System.out.println("WELCOME TO INTERACTIVE PERSONALITY IF GAME\n");
-                System.out.println("A word of warning, please answer truthfully, really TRUTHFULLY no matter what.\nIt's for your accurate assessment\n");
+                TitleIntro.printTitleIntro();
+                System.out.println("\nWelcome Player to IF (Interactive Fiction) game.\nA word of warning, please answer truthfully, really TRUTHFULLY no matter what.\nIt's all for your assessment accuracy :)\n");
                 MessageDelayer.waiting();
 
                 //Menu Intro
@@ -44,8 +44,7 @@ public class GameManager {
 
                         //Player name input
                         players.addPlayer();
-                        MessageDelayer.waiting();
-
+                        
                         //Reset count for score constructors
                         TallyIntroExtro.resetCountIE();
                         TallyOptPess.resetCountOP();
