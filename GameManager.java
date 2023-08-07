@@ -1,11 +1,15 @@
+/**
+ * This class is the centre of all classes. <p>
+ * Manages the game flow by initializing the QuestionBank, handles presenting questions to the player, 
+ * collects and stores their answers, calculates scores, and displays the results.
+ */
 public class GameManager {
 
     //constructors
     QuestionBank Qbank = new QuestionBank();
     PlayerList players = new PlayerList();
-    
-    public void GameStart(){
 
+    public void GameStart(){
         boolean finished = false;
         while(!finished){
             try{
@@ -57,6 +61,7 @@ public class GameManager {
                         break;
                     
                     case 3:
+                    // end of program
                         System.out.println("Thank you for participating");
                         finished=true;
                         break;

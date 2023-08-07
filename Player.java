@@ -1,8 +1,15 @@
+/**
+ * This class represents each player
+ */
 public class Player {
     private String name;
     private String traitIE;
     private String traitOP;
     
+    /**
+     * This constructor contains player's name and traits obtained after calculation
+     * @param name player's name
+     */
     public Player(String name){
         this.name = name;
         this.traitIE = setPersonalityIE();
@@ -21,6 +28,10 @@ public class Player {
         return traitOP;
     }
 
+    /**
+     * This method takes in the TallyIntroExtro counts
+     * @return a Trait string to be tied to Player's object
+     */
     private String setPersonalityIE(){
         if(TallyIntroExtro.getCountExtrovert() >= 7)
             return "Extrovert";
@@ -30,6 +41,10 @@ public class Player {
             return "Intro-Extro middle";        
     }
 
+    /**
+     * This method takes in the TallyOptPess counts
+     * @return a Trait string to be tied to Player's object
+     */
     private String setPersonalityOP(){
         if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
             return "Optimist";

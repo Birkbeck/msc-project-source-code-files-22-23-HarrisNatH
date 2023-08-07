@@ -15,7 +15,7 @@ clearly acknowledged. I give my permission to submit my report to the plagiarism
 testing database that the College is using and test it using plagiarism detection
 software, search engines or meta-searching software.”
 
-signed : Harris
+signed : Harris Nathaniel Hendra
 
 -----------------------------------------------------------------------------
 

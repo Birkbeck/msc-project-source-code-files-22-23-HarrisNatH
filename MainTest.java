@@ -1,22 +1,30 @@
-import org.junit.jupiter.api.BeforeEach;
+// import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class MainTest {
 
     @Test
-    void traitResultIntrovert(){
-        TallyIntroExtro IE = new TallyIntroExtro(7, 3);
-        assertEquals(IE.resultIE(), PersonalityTrait.IntrovertTrait());
+    void testBorder(){
+        String response = "hello Player";
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        FrameBorder.printResponse(response);
+        System.setOut(System.out);
+        String actual = outputStream.toString().trim();
+        String expected = "------------------\n" + "hello Player\n" + "------------------";
+        assertEquals(expected, actual);
     }
 
     @Test
-    void displayInfo(){
-        PlayerList score = new PlayerList();
-        score.addPlayer("Har");
-        score.addPlayer("Any");
-        String expected = "\n   Har\n   Traits: Introvert, OPMiddle\n   Any\n   Traits: Extrovert, Pessimist";
-        assertEquals(expected, score.toString());
+    void ifPlayersIsEmpty(){
+        PlayerList list= new PlayerList();
+        String actual = list.toString();
+        String expected = "Sorry! the Players' record is empty!";
+        assertEquals(expected, actual);
     }
 
 

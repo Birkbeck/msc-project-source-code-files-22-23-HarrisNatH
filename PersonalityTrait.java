@@ -1,3 +1,6 @@
+/**
+ * This class is responsible of explaining each trait's unique remarks
+ */
 public class PersonalityTrait {
 
     public static void ExtrovertTrait(){

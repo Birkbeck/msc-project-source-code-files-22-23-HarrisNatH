@@ -1,9 +1,14 @@
+/**
+ * This class represents all of the Questions
+ */
 public class QuestionBank {
-    // Questions que;
 
     //constructor
     Questions questions = new Questions();
 
+    /**
+     * This method uses Questions class' methods to present every questions to players
+     */
     public void Process(){
         //EI  Q1
         String narative = "\nYou wake up, and see your reflection in mirror, do you see yourself as:\n1. A leader for your party\n2. A lone adventurer";
