@@ -77,4 +77,17 @@ public class MainTest {
         String expected = "\n   Experiment\n   Traits: Intro-Extro middle, Optimist-Pessimist middle";
         assertEquals(expected, player.displayInfo()); 
     }
+
+    public static void numberException(String text){
+        try {
+            int num = Integer.parseInt(text);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid");
+        }
+    }
+
+    @Test
+    void invalidInput(){
+        MainTest.numberException("test");
+    }
 }
