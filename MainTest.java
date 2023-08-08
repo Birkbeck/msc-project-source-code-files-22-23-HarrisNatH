@@ -1,12 +1,13 @@
-// import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 public class MainTest {
-
+    PlayerList list= new PlayerList();
+    
     @Test
     void testBorder(){
         String response = "hello Player";
@@ -21,11 +22,59 @@ public class MainTest {
 
     @Test
     void ifPlayersIsEmpty(){
-        PlayerList list= new PlayerList();
         String actual = list.toString();
         String expected = "Sorry! the Players' record is empty!";
         assertEquals(expected, actual);
     }
 
+    @Test
+    void nameIgnoreCase(){
+        String name = "Harr234is";
+        boolean containsOnlyLetters =true;
+        for (char c : name.toCharArray()) {
+            if (!Character.isLetter(c)) {
+                containsOnlyLetters = false;
+                break;
+            } 
+        }
+        assertEquals(false, containsOnlyLetters);
+    }
 
+    @Test
+    void emptySpaceAsName(){
+        String user = "";
+        boolean isSpace = true;
+        if(user.isEmpty()) {
+            isSpace = true;
+        } else{ isSpace = false; }
+        assertEquals(true, isSpace);
+    }
+
+    @Test
+    void isListEmpty(){
+        ArrayList<String> test = new ArrayList<>();
+        boolean listEmpty = true;
+        if(test.isEmpty()){
+            listEmpty = true;
+        } else { listEmpty = false; }
+        assertEquals(true, listEmpty);
+    }
+
+    @Test
+    void IETrait1 (){
+        TallyIntroExtro test = new TallyIntroExtro(7, 0);
+        TallyOptPess test2 = new TallyOptPess(3, 5, 2);
+        Player player = new Player("Experiment");
+        String expected = "\n   Experiment\n   Traits: Introvert, Pessimist";
+        assertEquals(expected, player.displayInfo()); 
+    }
+
+    @Test
+    void IETrait2 (){
+        TallyIntroExtro test = new TallyIntroExtro(4, 6);
+        TallyOptPess test2 = new TallyOptPess(0, 3, 7);
+        Player player = new Player("Experiment");
+        String expected = "\n   Experiment\n   Traits: Intro-Extro middle, Optimist-Pessimist middle";
+        assertEquals(expected, player.displayInfo()); 
+    }
 }
