@@ -48,20 +48,37 @@ public class PlayerList {
      * <p> To prevent number, empty, and or duplicate name input from the player 
      */
     public void addPlayer() {
-        System.out.println("\nHold on, Player please tell us your name!");
+        System.out.println("\nHold on, Player please tell us your name (first and last name)");
         boolean nameValid = false;
         while (!nameValid) {
-            String user = System.console().readLine().trim();
+            String fullName = System.console().readLine().trim();
 
-            if (user.isEmpty()) {
-                System.out.println("\nSorry, name cannot be empty. Please give another name:");
-            } else if (containsOnlyLetters(user) && !isPlayerNameTaken(user)) {
-                Player newPlayer = new Player(user);
-                players.add(newPlayer);
-                System.out.println("\n" + user + ", thank you for saving the world, and don't forget us!");
-                nameValid = true;
+            if (!fullName.isEmpty()) {
+                String[] names = fullName.split(" ");
+
+                if(names.length >= 2){
+                    String firstName = names[0];
+                    String lastName = names[1];
+                
+                    if (containsOnlyLetters(firstName) && containsOnlyLetters(lastName)) {
+                        if (!isPlayerNameTaken(fullName)) {
+                            Player newPlayer = new Player(fullName);
+                            players.add(newPlayer);
+                            System.out.println("\n" + firstName + ", thank you for saving the world, and don't forget us!");
+                            nameValid = true;
+                        } else {
+                            System.out.println("\nSorry, " + fullName + " is already taken. Please give another name:");
+                        }
+                    } else {
+                        System.out.println("\nPlease use only letters for the names.");
+                    }
+
+                } else {
+                    System.out.println("\nPlease provide both first name and last name.");
+                }
+                
             } else {
-                System.out.println("\nSorry, " + user + " is already taken or is invalid. Please give another name:");
+                System.out.println("\nSorry, name cannot be empty. Please give another name:");
             }
         }
     }
