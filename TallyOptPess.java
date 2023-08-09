@@ -53,7 +53,9 @@ public class TallyOptPess {
      * Depending on the count in the constructor, it prints the assigned trait assessment to the player
      */
     public static void resultOP(){
-        if(getCountOptimist() > getCountPessimist() && getCountOptimist() > getCountMiddle())
+        if(getCountOptimist() ==0 && getCountPessimist() == 0 && getCountMiddle() == 0)
+            System.out.println("You haven't taken a test");
+        else if(getCountOptimist() > getCountPessimist() && getCountOptimist() > getCountMiddle())
             PersonalityTrait.OptimistTrait();
         else if(getCountMiddle()>getCountOptimist() && getCountMiddle()>getCountPessimist())
             PersonalityTrait.OPMiddleTrait();

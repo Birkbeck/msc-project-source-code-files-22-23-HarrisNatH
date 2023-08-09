@@ -33,7 +33,9 @@ public class Player {
      * @return a Trait string to be tied to Player's object
      */
     private String setPersonalityIE(){
-        if(TallyIntroExtro.getCountExtrovert() >= 7)
+        if(TallyIntroExtro.getCountIntrovert() ==0 && TallyIntroExtro.getCountExtrovert() == 0)
+            return null;
+        else if(TallyIntroExtro.getCountExtrovert() >= 7)
             return "Extrovert";
         else if(TallyIntroExtro.getCountIntrovert() >= 7)
             return "Introvert";        
@@ -46,7 +48,9 @@ public class Player {
      * @return a Trait string to be tied to Player's object
      */
     private String setPersonalityOP(){
-        if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
+        if(TallyOptPess.getCountOptimist() ==0 && TallyOptPess.getCountPessimist() == 0 && TallyOptPess.getCountMiddle() == 0)
+            return null;
+        else if(TallyOptPess.getCountOptimist() > TallyOptPess.getCountPessimist() && TallyOptPess.getCountOptimist() > TallyOptPess.getCountMiddle())
             return "Optimist";
         else if(TallyOptPess.getCountMiddle()>TallyOptPess.getCountOptimist() && TallyOptPess.getCountMiddle()>TallyOptPess.getCountPessimist())
             return "Optimist-Pessimist middle";

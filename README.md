@@ -29,15 +29,17 @@ This project is about creating a choice IF (interactive Fiction) game to assess 
 the adventure story here is entirely hand-crafted from the [ Test Your Personality ] by Adrian Wallwork.
 
 I took two tests that governs the general traits, namely Introvert vs Extrovert and Optimist vs Pessimist totalled 20 questionnaires tailored as one full adventure.
+(In future, may add more variety to adventure stories using other general traits that are not included here).
 
 ## Gameplay
-The user would need to have understand the forewarning at the beginning of the program, that they are to answer truthfully for accurate assessment
+The user would need to have understand the forewarning at the beginning of the program, that they are to answer truthfully for accurate assessment.
 
-then will be prompted to give their name, in which if duplicate name detected, it will ask again for new name, otherwise begins the game.
-
-For each point of story, they will be given choices to choose, there is no true or false merely plot story affection. Each choice simply give small change akin to butterfly effect to the entire adventure.
+Then begins the game. For each point of story, they will be given choices to choose, there is no true or false merely plot story affection. Each choice simply give small change akin to butterfly effect to the entire adventure.
 
 For every choice they made, will be recorded by program to count toward the scale how closer they are to certain personality. The end result will be given at the end of adventure.
+
+At the end of the game, the user will be prompted to give their name, in which if any invalid name detected, it will ask again for new name.
+Afterwards, the user's information will be stored to the score list as proof.
 
 
 

@@ -42,7 +42,9 @@ public class TallyIntroExtro {
      * Depending on the count in the constructor, it prints the assigned trait assessment to the player
      */
     public static void resultIE(){
-        if(getCountExtrovert() >= 7)
+        if(getCountExtrovert() ==0 && getCountIntrovert() == 0)
+            System.out.println("You haven't taken a test");
+        else if(getCountExtrovert() >= 7)
             PersonalityTrait.ExtrovertTrait();
         else if(getCountIntrovert() >= 7)
             PersonalityTrait.IntrovertTrait();
