@@ -5,7 +5,8 @@ public class Player {
     private String name;
     private String traitIE;
     private String traitOP;
-    
+    private String time;
+
     /**
      * This constructor contains player's name and traits obtained after calculation
      * @param name player's name
@@ -14,6 +15,7 @@ public class Player {
         this.name = name;
         this.traitIE = setPersonalityIE();
         this.traitOP = setPersonalityOP();
+        this.time = Timer.timeEachPlayer();
     }
     
     public String getName(){
@@ -27,7 +29,10 @@ public class Player {
     public String getTraitOP(){
         return traitOP;
     }
-
+    
+    public String getTime(){
+        return time;
+    }
     /**
      * This method takes in the TallyIntroExtro counts
      * @return a Trait string to be tied to Player's object
@@ -59,6 +64,6 @@ public class Player {
     }
 
     public String displayInfo(){
-        return  "\n   " + getName() + "\n   Traits: " + getTraitIE() + ", " + getTraitOP();
+        return  "\n   " + getName() + "\n   Time  : " + getTime() + "\n   Traits: " + getTraitIE() + ", " + getTraitOP();
     }
 }

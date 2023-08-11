@@ -1,5 +1,5 @@
 /**
- * This class is responsible of explaining each trait's unique remarks
+ * This class is responsible of explaining each trait's unique characteristics.
  */
 public class PersonalityTrait {
 

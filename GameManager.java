@@ -8,6 +8,7 @@ public class GameManager {
     //constructors
     QuestionBank Qbank = new QuestionBank();
     PlayerList players = new PlayerList();
+    Timer timer = new Timer();
 
     public void GameStart(){
         boolean finished = false;
@@ -23,9 +24,11 @@ public class GameManager {
                 int input = Integer.parseInt(System.console().readLine());
                 switch (input){
                     case 1:
-                        System.out.println("\nWelcome, You who transmigrated to another world, your second life begins.");
-                
+                        //Timer start
+                        timer.PlayerStartTimer();
+                        
                         //Opening
+                        System.out.println("\nWelcome, You who transmigrated to another world, your second life begins.");
                         System.out.println("\nNarrator: \n   It has been 10 years since you've arrived in a strange world,"+ 
                             " similar to Earth in medieval era but it has magic and monsters.\n"+
                             "   You have climbed in ranks as an A class adventurer and you currently has a crush on another adventurer.\n");
@@ -35,6 +38,10 @@ public class GameManager {
                         
                         //after Questioning
                         System.out.println("\n--------------------T H E  E N D--------------------");
+
+                        //End of Timer
+                        timer.PlayerFinishTimer();
+                        System.out.println(timer.getElapsedTime());
 
                         //RESULT
                         System.out.println("\nHope you enjoy your adventure!\nThen I will tell the result of the choices you have made: ");
@@ -48,7 +55,7 @@ public class GameManager {
 
                         //Player name input
                         players.addPlayer();
-                        
+
                         //Reset count for score constructors
                         TallyIntroExtro.resetCountIE();
                         TallyOptPess.resetCountOP();

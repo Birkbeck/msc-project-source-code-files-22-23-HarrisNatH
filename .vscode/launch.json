@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SwingGUI",
+            "request": "launch",
+            "mainClass": "SwingGUI",
+            "projectName": "msc-project-source-code-files-22-23-HarrisNatH_bb7e894f"
+        },
+        {
+            "type": "java",
+            "name": "PersonalityGameGUI",
+            "request": "launch",
+            "mainClass": "PersonalityGameGUI",
+            "projectName": "msc-project-source-code-files-22-23-HarrisNatH_bb7e894f"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",

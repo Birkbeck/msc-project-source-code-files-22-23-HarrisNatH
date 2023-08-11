@@ -36,9 +36,9 @@ public class QuestionBank {
 
         //OP Q5
         String narative5 = "\nOne day in the guild hall, you saw your crush, holding 2 tickets and is walking towards you, in your mind:\n1. Is she gonna ask me out?\n2. It's not me! no way\n3. Assume my crush already asked friends but they are busy";
-        String choiceA5 = "   \"She gave out a ticket to you while blushing. You accepted and agrees to go with her\"";
+        String choiceA5 = "   \"He/She gave out a ticket to you while blushing. You accepted and agrees to go with him/her.\"";
         String choiceB5 = "   \"it was friends behind me. You get hurt in feeling, but still hopefully next time!\"";
-        String choiceC5 = "   \"She gave one to you, you get hurt in feeling but grateful for a ticket\"";
+        String choiceC5 = "   \"He/She gave one to you, you get hurt in feeling but grateful for a ticket\"";
         questions.QuestionOP(narative5, choiceA5, choiceB5, choiceC5);
 
         //IE Q6
@@ -68,16 +68,16 @@ public class QuestionBank {
 
         //OP Q10
         String narative10 = "\nRewinding back minutes before the incident, you arrive and is going to your reserved table, you expect:\n1. Your crush already there waiting for you\n2. The table is empty, and your crush arrives a bit late\n3. You soon get emergency transmission, your crush can't come";
-        String choiceA10 = "   \"She waves at you, and you waves back\"";
-        String choiceB10 = "   \"You waves at your crush, noticed back\"";
+        String choiceA10 = "   \"He/She waves at you, and you waves back\"";
+        String choiceB10 = "   \"You waves at him/her, noticed back\"";
         String choiceC10 = "   \"You're sad but understand the situation, You then eat alone\"";
         questions.QuestionOP(narative10, choiceA10, choiceB10, choiceC10);
     
         //OP Q11
         String narative11 = "\nYou have been in relationship until your crush disappears with no contact, you assume:\n1. Your crush have an emergency?\n2. Your crush will come back, no worries\n3. Your crush left you for someone else";
-        String choiceA11 = "   \"You worry, so you track her whereabouts. Turns out your crush was on secret mission\"";
-        String choiceB11 = "   \"You know your crush better, and you are right\"";
-        String choiceC11 = "   \"Calm down, your jealousy is showing up. There, look your crush come back\"";
+        String choiceA11 = "   \"You worry, so you track his/her whereabouts. Turns out your crush was on secret mission\"";
+        String choiceB11 = "   \"You know him/her better, and you are right\"";
+        String choiceC11 = "   \"Calm down, your jealousy is showing up. There, look he/she come back\"";
         questions.QuestionOP(narative11, choiceA11, choiceB11, choiceC11);
 
         //EI Q12
@@ -94,41 +94,41 @@ public class QuestionBank {
 
         //OP Q14
         String narative14 = "\nNew day, you and your crush are up for an adventure, you looked at the request board and she picked up an escort job to faraway region that you dislike:\n1. You decide doing it only once! \n2. Try out, who knows you will change mind\n3. Comply with whatever she picked and agree doing it";
-        String choiceA14 = "   \"You feel chills from your crush's gaze. She frowns and you two don't talk a word for a day\"";
+        String choiceA14 = "   \"You feel chills from his/her's gaze. He/She frowns and you two don't talk a word for a day\"";
         String choiceB14 = "   \"Wow, never knew this job is so fun. Why have you been so against it?\"";
-        String choiceC14 = "   \"She is happy and that makes you happy, that's enough\"";
+        String choiceC14 = "   \"He/She is happy and that makes you happy, that's enough\"";
         questions.QuestionOP(narative14, choiceA14, choiceB14, choiceC14);
 
         //OP Q15
         String narative15 = "\nOne day Your crush wants you to follow for a private conversation, you think:\n1. Your crush wants to give you a surprise gift \n2. Something wrong but you keep calm, it's not serious\n3. You will be in for a heated argument";
-        String choiceA15 = "   \"She praised you for all you have done to her\"";
-        String choiceB15 = "   \"It's a gift, your crush thanks you\"";
+        String choiceA15 = "   \"He/She praised you for all you have done to him/her\"";
+        String choiceB15 = "   \"It's a gift, he/she thanks you\"";
         String choiceC15 = "   \"You're overthinking, it's a gift..\"";
         questions.QuestionOP(narative15, choiceA15, choiceB15, choiceC15);
 
         //OP Q16
         String narative16 = "\nYou were called for a B class monster subjugation request, however you have a date plan with your crush, so you ask your adventurer friends, assuming:\n1. They will agree to substitute you \n2. Only about 50% chance they can help you?\n3. They can't help you";
         String choiceA16 = "   \"You thank your friend and promise a meal\"";
-        String choiceB16 ="   \"Thankfully there is someone agrees to help you\"";
-        String choiceC16 = "   \"your crush understood your predicament, and decides to help you. Well this counts as a date plan\"";
+        String choiceB16 = "   \"Thankfully there is someone agrees to help you\"";
+        String choiceC16 = "   \"He/She understood your predicament, and decides to help you. Well this counts as a date plan\"";
         questions.QuestionOP(narative16, choiceA16, choiceB16, choiceC16);
 
         //OP Q17
         String narative17 = "\nYour crush caught strange disease however thankfully your Earth knowledge, it's just a flu: \n1. You visit and takes care of your crush\n2. Only visit after your crush gets better\n3. You leave her alone";
         String choiceA17 = "   \"You assure it's not serious and is being thanked for your attention\"";
-        String choiceB17 = "   \"Your cursh is at least grateful for your visit\"";
-        String choiceC17 = "   \"Your crush is kind of sad..\"";
+        String choiceB17 = "   \"He/She is at least grateful for your visit\"";
+        String choiceC17 = "   \"He/She is kind of sad..\"";
         questions.QuestionOP(narative17, choiceA17, choiceB17, choiceC17);
 
         //OP Q18
         String narative18 = "\nThe guildmaster calls you to his office, for a private matter: \n1. You expect a rank promotion\n2. You ask curiously, what's the matter \n3. You think \"Is there something bad happened?\"";
         String choiceA18 = "   \"You are very optimist. It was a promotion you have desired\"";
-        String choiceB18 = "   \"He laughs at your nervousness. He gave out the S-rank badge, it is a promotion!\"";
-        String choiceC18 = "   \"He looks at your expression, assures you it is a promotion\"";
+        String choiceB18 = "   \"The guildmaster laughs at your nervousness. He gave out the S-rank badge, it is a promotion!\"";
+        String choiceC18 = "   \"The guildmasterlooks at your expression, assures you it is a promotion\"";
         questions.QuestionOP(narative18, choiceA18, choiceB18, choiceC18);
 
         //OP Q19
-        String narative19 = "\nOnce you tried to apply for a rank promotion but was rejected, you thought the reason being:\n1. You were too overqualified\n2. Your skills were not sufficient yet \n3. It is too soon for you, said them";
+        String narative19 = "\nOnce you tried to apply for a rank promotion but was rejected, you thought the reason being:\n1. You were too overqualified\n2. Your skills were not sufficient yet \n3. They told that it is too soon for you";
         String choiceA19 = "   \"You are strong, you havent contributed enough\"";
         String choiceB19 = "   \"Your abilities are still average\"";
         String choiceC19 = "   \"They are right, it's not time for you\"";

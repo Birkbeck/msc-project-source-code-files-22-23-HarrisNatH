@@ -39,7 +39,7 @@ public class TallyIntroExtro {
     }
     
     /**
-     * Depending on the count in the constructor, it prints the assigned trait assessment to the player
+     * Depending on the count in the constructor, it prints the assigned trait characteristics to the player
      */
     public static void resultIE(){
         if(getCountExtrovert() ==0 && getCountIntrovert() == 0)
