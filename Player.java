@@ -8,7 +8,7 @@ public class Player {
     private String time;
 
     /**
-     * This constructor contains player's name and traits obtained after calculation
+     * This constructor contains player's name, traits, and time obtained after a game
      * @param name player's name
      */
     public Player(String name){
@@ -33,6 +33,7 @@ public class Player {
     public String getTime(){
         return time;
     }
+    
     /**
      * This method takes in the TallyIntroExtro counts
      * @return a Trait string to be tied to Player's object

@@ -9,7 +9,7 @@ public class GameManager {
     QuestionBank Qbank = new QuestionBank();
     PlayerList players = new PlayerList();
     Timer timer = new Timer();
-
+    
     public void GameStart(){
         boolean finished = false;
         while(!finished){
