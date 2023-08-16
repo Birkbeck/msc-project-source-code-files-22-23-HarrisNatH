@@ -15,9 +15,54 @@ public class QuestionBank {
     }
 
     /**
+     * method to return crush's gender based on orientation
+     * @param orientation the crush's gender
+     * @return he or she
+     */
+    public String CrushGender(String orientation){
+        if (orientation.equalsIgnoreCase("male")) {
+            return "he";
+        } else {
+            return "she";
+        }
+    }
+
+    /**
+     * method to return pronouns based on orientation
+     * @param orientation the crush's gender
+     * @return him or her 
+     */
+    public String Pronouns(String orientation){
+        if (orientation.equalsIgnoreCase("male")) {
+            return "him";
+        } else {
+            return "her";
+        }
+    }
+
+    /**
+     * method to return possessions based on orientation
+     * @param orientation the crush's gender
+     * @return his or her 
+     */
+    public String Possession(String orientation){
+        if (orientation.equalsIgnoreCase("male")) {
+            return "his";
+        } else {
+            return "her";
+        }
+    }
+
+    /**
      * This method uses Questions class' methods to present every questions to players
      */
     public void Process(){
+        String orientation;
+        do{
+        System.out.println("For the sake of story flow, what is your crush's gender? type male or female");
+        orientation = System.console().readLine();
+        } while (!orientation.equalsIgnoreCase("male") && !orientation.equalsIgnoreCase("female"));
+
         //EI  Q1
         String narative = "\nYou wake up, and see your reflection in mirror, do you see yourself as:\n1. A leader for your party\n2. A lone adventurer";
         String choiceA = "   \"You are a good leader\"";
@@ -47,10 +92,10 @@ public class QuestionBank {
         progressBar(4,20);
 
         //OP Q5
-        String narative5 = "\nOne day in the guild hall, you saw your crush, holding 2 tickets and is walking towards you, in your mind:\n1. Is she gonna ask me out?\n2. It's not me! no way\n3. Assume my crush already asked friends but they are busy";
-        String choiceA5 = "   \"He/She gave out a ticket to you while blushing. You accepted and agrees to go with him/her.\"";
+        String narative5 = "\nOne day in the guild hall, you saw your crush, holding 2 tickets and is walking towards you, in your mind:\n1. Is " + CrushGender(orientation) + " gonna ask me out?\n2. It's not me! no way\n3. Assume "+ CrushGender(orientation) +" already asked friends but they are busy";
+        String choiceA5 = "   \"" + CrushGender(orientation) + " gave out a ticket to you while blushing. You accepted and agrees to go with " + Pronouns(orientation) + ".\"";
         String choiceB5 = "   \"it was friends behind me. You get hurt in feeling, but still hopefully next time!\"";
-        String choiceC5 = "   \"He/She gave one to you, you get hurt in feeling but grateful for a ticket\"";
+        String choiceC5 = "   \"" + CrushGender(orientation) + " gave one to you, you get hurt in feeling but grateful for a ticket\"";
         questions.QuestionOP(narative5, choiceA5, choiceB5, choiceC5);
         progressBar(5,20);
 
@@ -84,18 +129,18 @@ public class QuestionBank {
         progressBar(9,20);
 
         //OP Q10
-        String narative10 = "\nRewinding back minutes before the incident, you arrive and is going to your reserved table, you expect:\n1. Your crush already there waiting for you\n2. The table is empty, and your crush arrives a bit late\n3. You soon get emergency transmission, your crush can't come";
-        String choiceA10 = "   \"He/She waves at you, and you waves back\"";
-        String choiceB10 = "   \"You waves at him/her, noticed back\"";
+        String narative10 = "\nRewinding back minutes before the incident, you arrive and is going to your reserved table, you expect:\n1. "+ CrushGender(orientation)+ " already there waiting for you\n2. The table is empty, and "+ CrushGender(orientation)+" arrives a bit late\n3. You soon get emergency transmission, "+ CrushGender(orientation)+" can't come";
+        String choiceA10 = "   \"" + CrushGender(orientation) + " waves at you, and you waves back\"";
+        String choiceB10 = "   \"You waves at " + Pronouns(orientation) + ", gets waved back\"";
         String choiceC10 = "   \"You're sad but understand the situation, You then eat alone\"";
         questions.QuestionOP(narative10, choiceA10, choiceB10, choiceC10);
         progressBar(10,20);
     
         //OP Q11
-        String narative11 = "\nYou have been messaging each other until your crush disappears with no contact, you assume:\n1. Your crush have an emergency?\n2. Your crush will come back, no worries\n3. Your crush left you for someone else";
-        String choiceA11 = "   \"You worry, so you track his/her whereabouts. Turns out your crush was on secret mission\"";
-        String choiceB11 = "   \"You know him/her better, and you are right\"";
-        String choiceC11 = "   \"Calm down, your jealousy is showing up. There, look he/she come back\"";
+        String narative11 = "\nYou have been messaging each other until your crush disappears with no contact, you assume:\n1. "+ CrushGender(orientation)+" have an emergency?\n2. "+ CrushGender(orientation)+ " will come back, no worries\n3. "+ CrushGender(orientation)+" left you for someone else";
+        String choiceA11 = "   \"You worry, so you track "+ Possession(orientation) + " whereabouts. Turns out "+ CrushGender(orientation)+" was on secret mission\"";
+        String choiceB11 = "   \"You know "+ Pronouns(orientation)+ " better, and you are right\"";
+        String choiceC11 = "   \"Calm down, your jealousy is showing up. There, look " + CrushGender(orientation) + " come back\"";
         questions.QuestionOP(narative11, choiceA11, choiceB11, choiceC11);
         progressBar(11,20);
 
@@ -114,17 +159,17 @@ public class QuestionBank {
         progressBar(13,20);
 
         //OP Q14
-        String narative14 = "\nNew day, you and your crush are up for an adventure, you looked at the request board and she picked up an escort job to faraway region that you dislike:\n1. You decide doing it only once! \n2. Try out, who knows you will change mind\n3. Comply with whatever she picked and agree doing it";
-        String choiceA14 = "   \"You feel chills from his/her's gaze. He/She frowns and you two don't talk a word for a day\"";
+        String narative14 = "\nNew day, you and your crush are up for an adventure, you looked at the request board and "+ CrushGender(orientation) + " picked up an escort job to faraway region that you dislike:\n1. You decide doing it only once! \n2. Try out, who knows you will change mind\n3. Comply with whatever" + CrushGender(orientation) +" picked and agree doing it";
+        String choiceA14 = "   \"You feel chills from "+ Possession(orientation)+"'s gaze. "+CrushGender(orientation)+" frowns and you two don't talk a word for a day\"";
         String choiceB14 = "   \"Wow, never knew this job is so fun. Why have you been so against it?\"";
-        String choiceC14 = "   \"He/She is happy and that makes you happy, that's enough\"";
+        String choiceC14 = "   \""+ CrushGender(orientation)+" is happy and that makes you happy, that's enough\"";
         questions.QuestionOP(narative14, choiceA14, choiceB14, choiceC14);
         progressBar(14,20);
 
         //OP Q15
-        String narative15 = "\nOne day Your crush wants you to follow for a private conversation, you think:\n1. Your crush wants to give you a surprise gift \n2. Something wrong but you keep calm, it's not serious\n3. You will be in for a heated argument";
-        String choiceA15 = "   \"He/She praised you for all you have done to him/her\"";
-        String choiceB15 = "   \"It's a gift, he/she thanks you\"";
+        String narative15 = "\nOne day your crush wants you to follow for a private conversation, you think:\n1. "+ CrushGender(orientation)+ " wants to give you a surprise gift \n2. Something wrong but you keep calm, it's not serious\n3. You will be in for a heated argument";
+        String choiceA15 = "   \""+ CrushGender(orientation)+" praised you for all you have done to " + Pronouns(orientation)+"\"";
+        String choiceB15 = "   \"It's a gift, "+ CrushGender(orientation)+ " thanks you\"";
         String choiceC15 = "   \"You're overthinking, it's a gift..\"";
         questions.QuestionOP(narative15, choiceA15, choiceB15, choiceC15);
         progressBar(15,20);
@@ -133,15 +178,15 @@ public class QuestionBank {
         String narative16 = "\nYou were called for a monster subjugation expedition, however you have a date plan with your crush, so you ask your adventurer friends, assuming:\n1. They will agree to substitute you \n2. Only about 50% chance they can help you?\n3. They can't help you";
         String choiceA16 = "   \"You thank your friend and promise a meal\"";
         String choiceB16 = "   \"Thankfully there is someone agrees to help you\"";
-        String choiceC16 = "   \"He/She understood your predicament, and decides to help you. Well this counts as a date plan\"";
+        String choiceC16 = "   \""+ CrushGender(orientation) +" understood your predicament, and decides to help you. Well this counts as a date plan\"";
         questions.QuestionOP(narative16, choiceA16, choiceB16, choiceC16);
         progressBar(16,20);
 
         //OP Q17
-        String narative17 = "\nYour crush caught strange disease however thankfully your Earth knowledge, it's just a flu: \n1. You visit and takes care of your crush\n2. Only visit after your crush gets better\n3. You leave her alone";
+        String narative17 = "\nYour crush caught strange disease however thankfully your Earth knowledge, it's just a flu: \n1. You visit and takes care of "+ Pronouns(orientation) + "\n2. Only visit after "+ CrushGender(orientation)+" gets better\n3. You leave "+ Pronouns(orientation)+ " alone";
         String choiceA17 = "   \"You assure it's not serious and is being thanked for your attention\"";
-        String choiceB17 = "   \"He/She is at least grateful for your visit\"";
-        String choiceC17 = "   \"He/She is kind of sad..\"";
+        String choiceB17 = "   \"" + CrushGender(orientation) +" is at least grateful for your visit\"";
+        String choiceC17 = "   \"" + CrushGender(orientation) + " is kind of sad but understand the risk\"";
         questions.QuestionOP(narative17, choiceA17, choiceB17, choiceC17);
         progressBar(17,20);
 
@@ -156,7 +201,7 @@ public class QuestionBank {
         //OP Q19
         String narative19 = "\nOnce you tried to apply for a rank promotion but was rejected, you thought the reason being:\n1. You were too overqualified\n2. Your skills were not sufficient yet \n3. They told that it is too soon for you";
         String choiceA19 = "   \"You are strong, you havent contributed enough\"";
-        String choiceB19 = "   \"Your abilities are still average\"";
+        String choiceB19 = "   \"You understand that you are still inexperienced\"";
         String choiceC19 = "   \"They are right, it's not time for you\"";
         questions.QuestionOP(narative19, choiceA19, choiceB19, choiceC19);
         progressBar(19,20);
