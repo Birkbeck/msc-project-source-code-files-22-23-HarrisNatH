@@ -72,13 +72,13 @@ public class QuestionBank {
         
         //EI  Q2
         String narative2 = "\nYou check your adventurer ID, your job is listed here as:\n1. Magic Knight(you like to work with party members)\n2. Shadow(you prefer work on your own)";
-        String choiceA2 = "   \"You really care your people\"";
-        String choiceB2 = "   \"Kind of gloomy but gets the job done neatly\"";
+        String choiceA2 = "   \"You really care for your people\"";
+        String choiceB2 = "   \"Kind of gloomy, but gets the job done neatly\"";
         questions.QuestionEI(narative2, choiceA2, choiceB2);
         progressBar(2,20);
 
         //EI  Q3
-        String narative3 = "\nYou wear clothes that suits your job class, you like your attire to be:\n1. Really unique for you alone\n2. Same as others, follow trends";
+        String narative3 = "\nYou wear clothes that suit your job class, you like your attire to be:\n1. Really unique for you alone\n2. Same as others, follow trends";
         String choiceA3 = "   \"You really proud of yourself\"";
         String choiceB3 = "   \"You know this can camouflage your identity\"";
         questions.QuestionEI(narative3, choiceA3, choiceB3);
@@ -107,22 +107,22 @@ public class QuestionBank {
         progressBar(6,20);
 
         //IE Q7
-        String narative7 = "\nReminiscing, you take out your phone brought with you from Earth, look through gallery and it's mostly filled:\n1. Family and friends photos\n2. Your selfies photos";
+        String narative7 = "\nReminiscing, you take out your phone brought with you from Earth, looking through gallery and it's mostly filled:\n1. Family and friends photos\n2. Your selfies photos";
         String choiceA7 = "   \"You begin to miss them...\"";
         String choiceB7 = "   \"You do like to look good in others eyes...\"";
         questions.QuestionIE(narative7, choiceA7, choiceB7);
         progressBar(7,20);
 
         //IE Q8
-        String narative8 = "\nIt was time to sleep, you cast a fairy dust for immediate sleep effect, as you fall asleep and dreams:\n1. Building your dream house\n2. You are on vacation at capital city";
+        String narative8 = "\nIt was time to sleep, you cast a fairy dust for immediate sleep effect, as you fall asleep and dream:\n1. Building your dream house\n2. You are on vacation at capital city";
         String choiceA8 = "   \"For you and your crush in the future, maybe!\"";
         String choiceB8 = "   \"It's nice to have a break from work\"";
         questions.QuestionIE(narative8, choiceA8, choiceB8);
         progressBar(8,20);
 
         //OP Q9
-        String narative9 = "\nThe day has come, you asked your crush out for a date dinner. However the day is too good to be true without any problem, do you:\n1. Wear casual but secretly bring combat suit in your magic pouch\n2. Wear casual to impress your date\n3. Still in combat suit";
-        String choiceA9 = "   \"Hey who knows there will be an emergency. And there is, bandits crashing a restaurant\"";
+        String narative9 = "\nThe day has come, you asked your crush out for a date dinner. Curiously, the day went good without any problem, do you:\n1. Wear casual but secretly bring combat suit in your magic pouch\n2. Wear casual to impress your date\n3. Still in combat suit";
+        String choiceA9 = "   \"Hey who knows there will be an emergency. And there are bandits crashing restaurant\"";
         String choiceB9 = "   \"Finally no heavy equipment. However bandits show up, you subjugated using cutlery\"";
         String choiceC9 = "   \"Well, never hurt to be careful. The instant bandits show up, you immediately subjugated them\"";
         questions.QuestionOP(narative9, choiceA9, choiceB9, choiceC9);
@@ -137,7 +137,7 @@ public class QuestionBank {
         progressBar(10,20);
     
         //OP Q11
-        String narative11 = "\nYou have been messaging each other until your crush disappears with no contact, you assume:\n1. "+ CrushGender(orientation)+" have an emergency?\n2. "+ CrushGender(orientation)+ " will come back, no worries\n3. "+ CrushGender(orientation)+" left you for someone else";
+        String narative11 = "\nYou have been messaging with your crush until "+ CrushGender(orientation)+" disappears with no contact, you assume:\n1. "+ CrushGender(orientation)+" have an emergency?\n2. "+ CrushGender(orientation)+ " will come back, no worries\n3. "+ CrushGender(orientation)+" left you for someone else";
         String choiceA11 = "   \"You worry, so you track "+ Possession(orientation) + " whereabouts. Turns out "+ CrushGender(orientation)+" was on secret mission\"";
         String choiceB11 = "   \"You know "+ Pronouns(orientation)+ " better, and you are right\"";
         String choiceC11 = "   \"Calm down, your jealousy is showing up. There, look " + CrushGender(orientation) + " come back\"";
@@ -145,7 +145,7 @@ public class QuestionBank {
         progressBar(11,20);
 
         //EI Q12
-        String narative12 = "\nAfter completing a delivery request, you decide to have a coffee in the guild hall. According to you, a break is:\n1. A chance to expand network with others\n2. Just a relax time so can have an efficient work later";
+        String narative12 = "\nAfter completing a delivery request, you decide to have a coffee in the guild hall. \nAccording to you, a break is:\n1. A chance to expand network with others\n2. Just a relax time so can have an efficient work later";
         String choiceA12 = "   \"You never miss for any rumors\"";
         String choiceB12 = "   \"You release all the pent up stress\"";
         questions.QuestionEI(narative12, choiceA12, choiceB12);
@@ -159,7 +159,7 @@ public class QuestionBank {
         progressBar(13,20);
 
         //OP Q14
-        String narative14 = "\nNew day, you and your crush are up for an adventure, you looked at the request board and "+ CrushGender(orientation) + " picked up an escort job to faraway region that you dislike:\n1. You decide doing it only once! \n2. Try out, who knows you will change mind\n3. Comply with whatever" + CrushGender(orientation) +" picked and agree doing it";
+        String narative14 = "\nNew day, you and your crush are up for an adventure, you looked at the request board \nAnd "+ CrushGender(orientation) + " picked up an escort job to faraway region that you dislike:\n1. You decide doing it only once! \n2. Try out, who knows you will change mind\n3. Comply with whatever" + CrushGender(orientation) +" picked and agree doing it";
         String choiceA14 = "   \"You feel chills from "+ Possession(orientation)+"'s gaze. "+CrushGender(orientation)+" frowns and you two don't talk a word for a day\"";
         String choiceB14 = "   \"Wow, never knew this job is so fun. Why have you been so against it?\"";
         String choiceC14 = "   \""+ CrushGender(orientation)+" is happy and that makes you happy, that's enough\"";
@@ -175,10 +175,10 @@ public class QuestionBank {
         progressBar(15,20);
 
         //OP Q16
-        String narative16 = "\nYou were called for a monster subjugation expedition, however you have a date plan with your crush, so you ask your adventurer friends, assuming:\n1. They will agree to substitute you \n2. Only about 50% chance they can help you?\n3. They can't help you";
+        String narative16 = "\nYou were called for a monster subjugation expedition, however you have a date plan with your crush\nSo you ask your adventurer friends, assuming:\n1. They will agree to substitute you \n2. Only about 50% chance they can help you?\n3. They can't help you";
         String choiceA16 = "   \"You thank your friend and promise a meal\"";
         String choiceB16 = "   \"Thankfully there is someone agrees to help you\"";
-        String choiceC16 = "   \""+ CrushGender(orientation) +" understood your predicament, and decides to help you. Well this counts as a date plan\"";
+        String choiceC16 = "   \""+ CrushGender(orientation) +" understand your predicament, and decides to help you. Well this counts as a date plan\"";
         questions.QuestionOP(narative16, choiceA16, choiceB16, choiceC16);
         progressBar(16,20);
 
@@ -199,7 +199,7 @@ public class QuestionBank {
         progressBar(18,20);
 
         //OP Q19
-        String narative19 = "\nOnce you tried to apply for a rank promotion but was rejected, you thought the reason being:\n1. You were too overqualified\n2. Your skills were not sufficient yet \n3. They told that it is too soon for you";
+        String narative19 = "\nOnce you tried to apply for a famous guild but was rejected, you thought the reason being:\n1. You were too overqualified\n2. Your skills were not sufficient yet \n3. They told that it is too soon for you";
         String choiceA19 = "   \"You are strong, you havent contributed enough\"";
         String choiceB19 = "   \"You understand that you are still inexperienced\"";
         String choiceC19 = "   \"They are right, it's not time for you\"";
@@ -207,7 +207,7 @@ public class QuestionBank {
         progressBar(19,20);
 
         //EI Q20
-        String narative20 = "\nAfter a long journey, and now of old age, you feel sleepy and the next time you opens your eyes, suddenly you are back in real world. \nIt seems you fell asleep during the music concert. At same time the song is over and there is a standing ovation:\n1. You start clapping until you are last of the few to stop clapping\n2. You just clap and then stop soon after";
+        String narative20 = "\nAfter a long journey, and now of old age, you feel sleepy and the next time you opens your eyes.. suddenly you are back in real world. \nIt seems you fell asleep during the music concert. Just in time the song is over and there is a standing ovation:\n1. You start clapping until you are last of the few to stop clapping\n2. You just clap and then stop soon after";
         String choiceA20 = "   \"You tears up, that dream felt so real\"";
         String choiceB20 = "   \"Back on your seat, you smiles and quotes: What an adventure\"";
         questions.QuestionEI(narative20, choiceA20, choiceB20);
