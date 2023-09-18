@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class MainTest {
     PlayerList list= new PlayerList();
     
+    //test to print out border
     @Test
     void testBorder(){
         String response = "hello Player";
@@ -20,6 +21,7 @@ public class MainTest {
         assertEquals(expected, actual);
     }
 
+    //test to print response if playerlist is empty
     @Test
     void ifPlayersIsEmpty(){
         String actual = list.toString();
@@ -27,6 +29,7 @@ public class MainTest {
         assertEquals(expected, actual);
     }
 
+    //test to print false if the String contains number
     @Test
     void nameIgnoreCase(){
         String name = "Harr234is";
@@ -40,6 +43,7 @@ public class MainTest {
         assertEquals(false, containsOnlyLetters);
     }
 
+    //test to print false if the String is empty or space
     @Test
     void emptySpaceAsName(){
         String user = "";
@@ -60,6 +64,7 @@ public class MainTest {
         assertEquals(true, listEmpty);
     }
 
+    //test to print out the assessmnet result
     @Test
     void IETrait1 (){
         TallyIntroExtro test = new TallyIntroExtro(7, 0);
@@ -78,6 +83,7 @@ public class MainTest {
         assertEquals(expected, player.displayInfo()); 
     }
 
+    //test to print exception if the number intered is text
     public static void numberException(String text){
         try {
             int num = Integer.parseInt(text);
